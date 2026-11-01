@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F7F7">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FFC300"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/shop_name_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="店铺详情"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- 公告 + 配送 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shop_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业中 | 欢迎光临"
+                    android:textSize="14sp"
+                    android:textColor="#666666" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginVertical="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shop_delivery_fee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="配送费 ¥3"
+                        android:textSize="13sp"
+                        android:textColor="#FF6B35" />
+
+                    <TextView
+                        android:id="@+id/shop_delivery_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="约30分钟"
+                        android:textSize="13sp"
+                        android:textColor="#999999" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 菜单列表 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门推荐"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 菜品1 -->
+                <LinearLayout
+                    android:id="@+id/food1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food1_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#FFF8E1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food1_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="香辣鸡腿堡"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 500+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food1_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥15.5"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+
+                <!-- 菜品2 -->
+                <LinearLayout
+                    android:id="@+id/food2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food2_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#FFEBEE" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food2_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新奥尔良烤翅"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 300+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food2_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥12.0"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+
+                <!-- 菜品3 -->
+                <LinearLayout
+                    android:id="@+id/food3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food3_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#E8F5E9" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food3_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="百事可乐"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 800+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food3_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥9.5"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+
+                <!-- 菜品4 -->
+                <LinearLayout
+                    android:id="@+id/food4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food4_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#FFF8E1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food4_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="薯条(大份)"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 600+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food4_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥11.0"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+
+                <!-- 菜品5 -->
+                <LinearLayout
+                    android:id="@+id/food5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food5_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#FFF3E0" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food5_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="香辣鸡翅(2块)"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 400+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food5_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥10.5"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+
+                <!-- 菜品6 -->
+                <LinearLayout
+                    android:id="@+id/food6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/food6_icon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:scaleType="centerCrop"
+                        android:background="#F3E5F5" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/food6_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="葡式蛋挞"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月售 250+"
+                            android:textSize="12sp"
+                            android:textColor="#999999"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/food6_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥8.0"
+                        android:textSize="15sp"
+                        android:textColor="#FF6B35"
+                        android:textStyle="bold"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:id="@+id/add_food6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="+"
+                        android:textSize="16sp"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:padding="0dp"
+                        minWidth="0dp"
+                        minHeight="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 购物车 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购物车"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/cart_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购物车是空的"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:padding="6dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginVertical="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="合计：¥0.0"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF6B35" />
+
+                    <Button
+                        android:id="@+id/go_order_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="去结算"
+                        android:background="#FFC300"
+                        android:textColor="#FFFFFF"
+                        android:paddingHorizontal="24dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
